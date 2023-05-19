@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors(builder =>
-    builder.WithOrigins("https://knittingapp-react.azurewebsites.net", "http://localhost:7083")
+    builder.WithOrigins("https://knittingapp-react.azurewebsites.net", "http://localhost:3000", "https://localhost:3000")
         .AllowAnyMethod()
         .AllowCredentials());
 
