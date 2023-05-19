@@ -12,7 +12,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("https://knittingapp-backend.azurewebsites.net/knittingtypes/", "https://localhost:3000/")
+            policy.WithOrigins("https://knittingapp-backend.azurewebsites.net/knittingtypes/", 
+                "https://localhost:3000/", 
+                "https://knittingapp-react.azurewebsites.net/")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
