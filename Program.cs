@@ -8,6 +8,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
+builder.Services.AddLogging(builder =>
+{
+    builder.AddConsole();
+    builder.AddDebug();
+    builder.AddAzureWebAppDiagnostics();
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
