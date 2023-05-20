@@ -4,7 +4,7 @@ using webapi.Models;
 namespace webapi.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class KnittingTypesController : ControllerBase
 {
     private static readonly List<KnittingType> KnittingTypes = new()
