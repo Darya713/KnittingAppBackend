@@ -51,6 +51,10 @@ public class KnittingTypesController : ControllerBase
     [HttpGet(Name = "GetKnittingTypes")]
     public IEnumerable<KnittingType> Get()
     {
-        return KnittingTypes.ToArray();
+        var list = KnittingTypes.ToArray();
+
+        _logger.LogInformation("GetKnittingTypes", list.Length);
+
+        return list;
     }
 }
